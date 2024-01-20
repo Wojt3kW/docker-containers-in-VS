@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "e7fd113b-7914-40f0-a2da-6894121ae127",
+		"name": "docker containers in VS",
+		"description": "docker containers in Visual Studio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18801357"
+	},
+	"item": [
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:3101/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3101",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4101/roles",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4101",
+					"path": [
+						"roles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

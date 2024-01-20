@@ -1,0 +1,35 @@
+version: "3.9"
+name: "docker-containers-in-vs"
+
+services:
+  users.api:
+    image: ${DOCKER_REGISTRY-}usersapi
+    container_name: usersapi
+    build:
+      context: .
+      dockerfile: Users.Api/Dockerfile
+    ports:
+      - 3001:80
+      - 3101:443
+    networks:
+      - backend
+  
+
+
+  roles.api:
+    image: ${DOCKER_REGISTRY-}rolesapi
+    container_name: rolesapi
+    build:
+      context: .
+      dockerfile: Roles.Api/Dockerfile
+    ports:
+      - 4001:80
+      - 4101:443
+    networks:
+      - backend
+
+
+networks:
+  backend:
+    name: backend
+    driver: bridge
