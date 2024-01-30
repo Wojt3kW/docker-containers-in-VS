@@ -4,7 +4,7 @@ name: "docker-containers-in-vs"
 services:
   users.api:
     image: ${DOCKER_REGISTRY-}usersapi
-    container_name: usersapi
+    container_name: users-api
     build:
       context: .
       dockerfile: Users.Api/Dockerfile
@@ -12,13 +12,11 @@ services:
       - 3001:80
       - 3101:443
     networks:
-      - backend
-  
-
+      - network-backend
 
   roles.api:
     image: ${DOCKER_REGISTRY-}rolesapi
-    container_name: rolesapi
+    container_name: roles-api
     build:
       context: .
       dockerfile: Roles.Api/Dockerfile
@@ -26,10 +24,9 @@ services:
       - 4001:80
       - 4101:443
     networks:
-      - backend
-
+      - network-backend
 
 networks:
-  backend:
-    name: backend
+  network-backend:
+    name: network-backend
     driver: bridge
