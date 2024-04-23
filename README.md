@@ -1,4 +1,4 @@
-**docker-containers-in-VS** shows you how to run Visual Studio projects on Docker
+**docker-containers-in-VS** shows you how to run Visual Studio projects directly on Docker
 
 ## Getting started
 1. Download [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Windows. [Docker Compose](https://docs.docker.com/compose/) will be automatically installed.
